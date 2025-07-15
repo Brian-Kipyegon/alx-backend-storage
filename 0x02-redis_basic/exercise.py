@@ -84,7 +84,7 @@ class Cache:
     def __init__(self):
         """Initialize the Redis connection and flush the database."""
         self._redis = redis.Redis(
-            host="172.29.232.142", port=6379, decode_responses=True
+            host="172.29.232.142", port=6379, decode_responses=False
         )
         self._redis.flushdb()
 
